@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'survey_one',
     'survey_two',
     'drf_yasg',
-    'channels',
 ]
 
 MIDDLEWARE = [
@@ -45,13 +44,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ASGI_APPLICATION = 'config.routing.application'
+# ASGI_APPLICATION = 'config.routing.application'
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer',
-    },
-}
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels.layers.InMemoryChannelLayer',
+#     },
+# }
 
 ROOT_URLCONF = 'config.urls'
 
