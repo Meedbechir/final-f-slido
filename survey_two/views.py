@@ -1,4 +1,5 @@
-from rest_framework import generics, permissions
+from rest_framework import generics
+# from rest_framework import permissions
 from .models import SurveyTwo, AnswerTwo
 from .serializers import SurveySerializer, SurveyTwoSerializer, AnswerSerializer, SurveyRetrieveBySlugSerializer
 from rest_framework.response import Response
@@ -7,7 +8,7 @@ from rest_framework import status
 class SurveyCreateViewTwo(generics.ListCreateAPIView):
     queryset = SurveyTwo.objects.all()
     serializer_class = SurveySerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user) 

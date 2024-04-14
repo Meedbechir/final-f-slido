@@ -1,5 +1,6 @@
 from django.http import Http404
-from rest_framework import generics, views, permissions
+from rest_framework import generics, views
+# from rest_framework import permissions
 from rest_framework.response import Response
 from .models import QuestionOne, AnswerOne
 from .serializers import QuestionOneSerializer, AnswerOneSerializer, QuestionDetailSerializer
@@ -7,7 +8,7 @@ from .serializers import QuestionOneSerializer, AnswerOneSerializer, QuestionDet
 class QuestionListCreateViewOne(generics.ListCreateAPIView):
     queryset = QuestionOne.objects.all()
     serializer_class = QuestionOneSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
     
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user) 
