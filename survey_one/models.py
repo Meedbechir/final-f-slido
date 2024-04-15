@@ -8,7 +8,7 @@ class QuestionOne(models.Model):
     question_text = models.TextField()
     slug = models.SlugField(unique=True, max_length=255, blank=True, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='question_one', default=1)
+    # owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='question_one', default=1)
 
 
     def __str__(self):

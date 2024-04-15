@@ -31,7 +31,7 @@ class SurveySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SurveyTwo
-        fields = ['id', 'question', 'options', 'slug', 'owner']
+        fields = ['id', 'question', 'options', 'slug']
 
     def create(self, validated_data):
         options_data = validated_data.pop('options', [])

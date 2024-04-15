@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class SurveyTwo(models.Model):
     question = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, max_length=255, blank=True, editable=False)
-    owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='surveys', default=1)
+    # owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='surveys', default=1)
 
 
     def __str__(self):

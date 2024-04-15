@@ -11,7 +11,7 @@ class SurveyCreateViewTwo(generics.ListCreateAPIView):
     # permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user) 
+        serializer.save() 
 
 class SurveyRetrieveUpdateDestroyViewTwo(generics.RetrieveUpdateDestroyAPIView):
     queryset = SurveyTwo.objects.all()
