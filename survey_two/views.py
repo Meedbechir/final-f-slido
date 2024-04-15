@@ -17,7 +17,7 @@ class SurveyRetrieveUpdateDestroyViewTwo(generics.RetrieveUpdateDestroyAPIView):
     queryset = SurveyTwo.objects.all()
     serializer_class = SurveyTwoSerializer
 
-class AnswerCreateViewTwo(generics.CreateAPIView):
+class AnswerCreateViewTwo(generics.ListCreateAPIView):
     queryset = AnswerTwo.objects.all()
     serializer_class = AnswerSerializer
 
